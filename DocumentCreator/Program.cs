@@ -16,6 +16,10 @@ namespace DocumentCreator
             String bodyText = Console.ReadLine();
 
             //Write code here: to call the HTMLDocumentBuilder and do the necessary processing
+            HTMLDocumentBuilder newDocBuilder = new HTMLDocumentBuilder();
+            newDocBuilder.BuildDocument(titleText, authorText, bodyText);
+            
+            HTMLDocument resultDoc = newDocBuilder.GetDocument();
 
             //resultDoc is an HTMLDocument, the result of the document building process
             Console.WriteLine(resultDoc.GetString());
